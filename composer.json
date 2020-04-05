@@ -1,0 +1,34 @@
+{
+    "name": "churakovmike/yii2-megakassa",
+    "type": "yii2-extension",
+    "description": "Yii2 extension for Megakassa",
+    "keywords": [
+        "yii2",
+        "yii2 extension",
+        "megakassa"
+    ],
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Churakov Mike",
+            "email": "churakovmike@mail.ru",
+            "homepage": "https://github.com/Churakovmike/yii2-megakassa",
+            "role": "developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "~2"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "ChurakovMike\\Megakassa\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
