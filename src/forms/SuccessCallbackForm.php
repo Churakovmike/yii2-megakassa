@@ -2,6 +2,7 @@
 
 namespace ChurakovMike\Megakassa\forms;
 
+use ChurakovMike\Megakassa\MegaKassaComponent;
 use yii\base\Model;
 use yii\behaviors\AttributeTypecastBehavior;
 
@@ -39,15 +40,6 @@ class SuccessCallbackForm extends Model
     const STATUSES = [
         self::STATUS_SUCCESS,
         self::STATUS_FAIL,
-    ];
-
-    /**
-     * Available currencies.
-     */
-    const CURRENCIES = [
-        'RUB',
-        'USD',
-        'EUR',
     ];
 
     /**
@@ -248,7 +240,7 @@ class SuccessCallbackForm extends Model
      */
     public function validateCurrency($attribute, $params)
     {
-        if (!in_array($attribute, self::CURRENCIES, true)) {
+        if (!in_array($attribute, MegaKassaComponent::CURRENCIES, true)) {
             $this->addError('Wrong currency value');
         }
     }
