@@ -9,7 +9,7 @@ Yii2 megakassa extension.
 ```php
 composer require churakovmike/yii2-megakassa
 ```
-Официальная документация с доступными методами и примерами ответа доступна на сайте платежной системы [https://megakassa.ru/api/!](https://megakassa.ru/api/)
+Официальная документация с доступными методами и примерами ответа доступна на сайте платежной системы [https://megakassa.ru/api](https://megakassa.ru/api/)
 ## Конфигурация компонента
 В main-local.php добавьте следующие строки
 ```php
