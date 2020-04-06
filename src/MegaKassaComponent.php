@@ -40,61 +40,6 @@ class MegaKassaComponent extends Component
         ACTION_WITHDRAW_LIST = 'withdraws_list';
 
     /**
-     * Statuses list.
-     * @see https://megakassa.ru/api/#status_list
-     */
-    const
-        STATUS_CONFIRMED = 'Confirmed',
-        STATUS_PROCESSING = 'Processing',
-        STATUS_SUCCESS = 'Success',
-        STATUS_ERROR = 'Error',
-        STATUS_DEBUG = 'Debug',
-        STATUSES = [
-            self::STATUS_CONFIRMED,
-            self::STATUS_PROCESSING,
-            self::STATUS_SUCCESS,
-            self::STATUS_ERROR,
-            self::STATUS_DEBUG,
-        ];
-
-    /**
-     * Error list.
-     *
-     * @see https://megakassa.ru/api/#status_list
-     */
-    const ERROR_LIST = [
-        0 => 'Метод не определен',
-        1 => 'Не все обязательные поля были заполнены',
-        2 => 'Параметр shop_id был передан некорректно',
-        3 => 'Параметр sign был передан некорректно',
-        4 => 'Сайт не найден',
-        5 => 'API Выплат для сайта выключен',
-        6 => 'API Выплат для сайта недоступен по текущему IP-адресу',
-        7 => 'Секретный ключ некорректен.',
-        8 => 'Параметр sign не соответствует сигнатуре доступа',
-        9 => 'Ведутся технические работы, попробуйте позже',
-        101 => 'Список платежных систем не доступен',
-        201 => 'Список валют для сайта не определен или не доступен',
-        301 => 'Необходимо указать только один параметр, либо amount либо amount_due, но не оба сразу',
-        302 => 'Параметр method_id был передан некорректно',
-        303 => 'Параметр amount был передан некорректно',
-        304 => 'Параметр currency_from был передан некорректно',
-        305 => 'Параметр wallet был передан некорректно',
-        306 => 'Платежная система не определена',
-        307 => 'Выбранная валюта не доступна для сайта',
-        308 => 'Сумма вывода превышает баланс вашего сайта',
-        309 => 'Сумма вывода меньше минимальной для данной платежной системы',
-        310 => 'Сумма вывода превышает разовую максимальную сумму вывода для данной платежной системы',
-        311 => 'Сумма вывода превышает сумму доступную для вывода. Вероятно, ранее другие пользователи Мегакассы вывели требуемую вами сумму. Попробуйте позже.',
-        312 => 'Превышен суточный лимит.',
-        401 => 'Параметр withdraw_id был передан некорректно',
-        402 => 'Выплата не найдена',
-        403 => 'Выплата не принадлежит вашему сайту',
-        501 => 'Параметр page был передан некорректно',
-        502 => 'Список выводов пуст',
-    ];
-
-    /**
      * Set this property in config.
      *
      * @var integer $shopId
@@ -245,7 +190,7 @@ class MegaKassaComponent extends Component
      * @param array $data
      * @return string
      */
-    public function generateSignature(array $data)
+    public function generateSignature(array $data): string
     {
         ksort($data);
         $sign = array_values($data);
