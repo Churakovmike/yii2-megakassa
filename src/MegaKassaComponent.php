@@ -113,8 +113,8 @@ class MegaKassaComponent extends Component
      * Create withdraw by available payment systems.
      *
      * @param int $methodId
-     * @param int $amount
-     * @param int $amount_due
+     * @param float $amount
+     * @param float $amountDue
      * @param string $currencyFrom
      * @param string $wallet
      * @param string $comment
@@ -126,7 +126,7 @@ class MegaKassaComponent extends Component
     public function createWithdraw(
         int $methodId = 0,
         float $amount = null,
-        float $amount_due = null,
+        float $amountDue = null,
         string $currencyFrom,
         string $wallet,
         string $comment = '',
@@ -142,10 +142,10 @@ class MegaKassaComponent extends Component
         ];
 
         if (is_null($amount)) {
-            $data['amount_due'] = $amount_due;
+            $data['amount_due'] = $amountDue;
         }
 
-        if (is_null($amount_due)) {
+        if (is_null($amountDue)) {
             $data['amount'] = $amount;
         }
 
