@@ -3,7 +3,7 @@ Yii2 megakassa extension.
 
 [![Latest Stable Version](https://poser.pugx.org/churakovmike/yii2-megakassa/v/stable)](https://packagist.org/packages/churakovmike/yii2-megakassa)
 [![License](https://poser.pugx.org/churakovmike/yii2-megakassa/license)](https://packagist.org/packages/churakovmike/yii2-megakassa)
-
+[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/Churakovmike/yii2-megakassa/maintainability)
 ## Установка
 Установить расширение можно через композер командой
 ```php
