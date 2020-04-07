@@ -193,7 +193,7 @@ class SuccessCallbackForm extends Model
      */
     public function validateSignature($attribute, $params)
     {
-        if(!preg_match('/^[0-9a-f]{32}$/', $this->$attribute)) {
+        if (!preg_match('/^[0-9a-f]{32}$/', $this->$attribute)) {
             $this->addError($attribute, 'Wrong signature format');
         }
 
